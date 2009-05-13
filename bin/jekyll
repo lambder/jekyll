@@ -124,7 +124,7 @@ if options['auto']
     puts "[#{t}] regeneration: #{args.size} files changed"
     begin
       site.process
-    rescue => e
+    rescue Exception => e
       STDERR.puts e
       STDERR.puts e.backtrace.join("\n")
       raise
