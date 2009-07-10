@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom Preston-Werner", "Henrik Nyh"]
-  s.date = %q{2009-04-27}
+  s.date = %q{2009-07-10}
   s.default_executable = %q{jekyll}
   s.description = %q{Jekyll is a simple, blog aware, static site generator.}
   s.email = %q{tom@mojombo.com}
@@ -15,69 +15,81 @@ Gem::Specification.new do |s|
     "README.textile"
   ]
   s.files = [
-    "History.txt",
-    "README.textile",
-    "Rakefile",
-    "VERSION.yml",
-    "bin/jekyll",
-    "lib/jekyll.rb",
-    "lib/jekyll/albino.rb",
-    "lib/jekyll/converters/csv.rb",
-    "lib/jekyll/converters/mephisto.rb",
-    "lib/jekyll/converters/mt.rb",
-    "lib/jekyll/converters/textpattern.rb",
-    "lib/jekyll/converters/typo.rb",
-    "lib/jekyll/converters/wordpress.rb",
-    "lib/jekyll/convertible.rb",
-    "lib/jekyll/core_ext.rb",
-    "lib/jekyll/filters.rb",
-    "lib/jekyll/haml_helpers.rb",
-    "lib/jekyll/layout.rb",
-    "lib/jekyll/page.rb",
-    "lib/jekyll/post.rb",
-    "lib/jekyll/site.rb",
-    "lib/jekyll/tags/highlight.rb",
-    "lib/jekyll/tags/include.rb",
-    "test/helper.rb",
-    "test/source/_includes/sig.markdown",
-    "test/source/_layouts/default.html",
-    "test/source/_layouts/simple.html",
-    "test/source/_posts/2008-02-02-not-published.textile",
-    "test/source/_posts/2008-02-02-published.textile",
-    "test/source/_posts/2008-10-18-foo-bar.textile",
-    "test/source/_posts/2008-11-21-complex.textile",
-    "test/source/_posts/2008-12-03-permalinked-post.textile",
-    "test/source/_posts/2008-12-13-include.markdown",
-    "test/source/_posts/2009-01-27-array-categories.textile",
-    "test/source/_posts/2009-01-27-categories.textile",
-    "test/source/_posts/2009-01-27-category.textile",
-    "test/source/category/_posts/2008-9-23-categories.textile",
-    "test/source/css/screen.css",
-    "test/source/foo/_posts/bar/2008-12-12-topical-post.textile",
-    "test/source/index.html",
-    "test/source/z_category/_posts/2008-9-23-categories.textile",
-    "test/suite.rb",
-    "test/test_filters.rb",
-    "test/test_generated_site.rb",
-    "test/test_post.rb",
-    "test/test_site.rb",
-    "test/test_tags.rb"
+    ".gitignore",
+     "History.txt",
+     "README.textile",
+     "Rakefile",
+     "TODO",
+     "VERSION.yml",
+     "bin/jekyll",
+     "features/create_sites.feature",
+     "features/embed_filters.feature",
+     "features/permalinks.feature",
+     "features/post_data.feature",
+     "features/site_configuration.feature",
+     "features/site_data.feature",
+     "features/step_definitions/jekyll_steps.rb",
+     "features/support/env.rb",
+     "jekyll.gemspec",
+     "lib/jekyll.rb",
+     "lib/jekyll/albino.rb",
+     "lib/jekyll/converters/csv.rb",
+     "lib/jekyll/converters/marley.rb",
+     "lib/jekyll/converters/mephisto.rb",
+     "lib/jekyll/converters/mt.rb",
+     "lib/jekyll/converters/textpattern.rb",
+     "lib/jekyll/converters/typo.rb",
+     "lib/jekyll/converters/wordpress.rb",
+     "lib/jekyll/convertible.rb",
+     "lib/jekyll/core_ext.rb",
+     "lib/jekyll/filters.rb",
+     "lib/jekyll/haml_helpers.rb",
+     "lib/jekyll/layout.rb",
+     "lib/jekyll/page.rb",
+     "lib/jekyll/post.rb",
+     "lib/jekyll/site.rb",
+     "lib/jekyll/tags/highlight.rb",
+     "lib/jekyll/tags/include.rb",
+     "test/helper.rb",
+     "test/source/_includes/sig.markdown",
+     "test/source/_layouts/default.html",
+     "test/source/_layouts/simple.html",
+     "test/source/_posts/2008-02-02-not-published.textile",
+     "test/source/_posts/2008-02-02-published.textile",
+     "test/source/_posts/2008-10-18-foo-bar.textile",
+     "test/source/_posts/2008-11-21-complex.textile",
+     "test/source/_posts/2008-12-03-permalinked-post.textile",
+     "test/source/_posts/2008-12-13-include.markdown",
+     "test/source/_posts/2009-01-27-array-categories.textile",
+     "test/source/_posts/2009-01-27-categories.textile",
+     "test/source/_posts/2009-01-27-category.textile",
+     "test/source/category/_posts/2008-9-23-categories.textile",
+     "test/source/css/screen.css",
+     "test/source/foo/_posts/bar/2008-12-12-topical-post.textile",
+     "test/source/index.html",
+     "test/source/z_category/_posts/2008-9-23-categories.textile",
+     "test/suite.rb",
+     "test/test_filters.rb",
+     "test/test_generated_site.rb",
+     "test/test_post.rb",
+     "test/test_site.rb",
+     "test/test_tags.rb"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/mojombo/jekyll}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{jekyll}
-  s.rubygems_version = %q{1.3.0}
+  s.rubygems_version = %q{1.3.1}
   s.summary = %q{Jekyll is a simple, blog aware, static site generator.}
   s.test_files = [
     "test/helper.rb",
-    "test/suite.rb",
-    "test/test_filters.rb",
-    "test/test_generated_site.rb",
-    "test/test_post.rb",
-    "test/test_site.rb",
-    "test/test_tags.rb"
+     "test/suite.rb",
+     "test/test_filters.rb",
+     "test/test_generated_site.rb",
+     "test/test_post.rb",
+     "test/test_site.rb",
+     "test/test_tags.rb"
   ]
 
   if s.respond_to? :specification_version then
